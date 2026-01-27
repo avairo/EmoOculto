@@ -161,7 +161,7 @@ export default function Home() {
                     type="text"
                     value={emojiInput}
                     onChange={(e) => setEmojiInput(e.target.value)}
-                    placeholder="😀🍕🚀 (Paste emojis here)"
+                    placeholder="💀💀💀 (Paste emojis here)"
                   />
                 </div>
               </div>
