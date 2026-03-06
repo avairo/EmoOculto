@@ -1,5 +1,15 @@
-.tech-font {
-    --tech-font: 'Futura', 'coluna', sans-serif;
+.primary {
+  /* This is a primary color comment */
+  color: #ff0000;
 }
 
-// Additional existing styles and functionality will remain unchanged.
+.secondary {
+  /* This is a secondary color comment */
+  color: #00ff00;
+}
+
+/* Comment for global styles */
+* {
+  margin: 0;
+  padding: 0;
+}
