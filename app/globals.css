@@ -1,3 +1,5 @@
 .tech-font {
-  font-family: 'coluna', 'Share Tech Mono', 'Courier New', monospace;
+    --tech-font: 'Futura', 'coluna', sans-serif;
 }
+
+// Additional existing styles and functionality will remain unchanged.
