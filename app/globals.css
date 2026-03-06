@@ -1,2 +1,6 @@
-/* Preserved file content identified by SHA: 9403aea8dff328250110a4f4b034f7748f216f7d */
-/* Add the actual CSS content here */
+.app {
+  font-family: 'Roboto', sans-serif;
+  /* other styles */
+}
+
+/* Ensure any previous heading styles are also restored */
