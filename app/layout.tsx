@@ -1,11 +1,18 @@
 import React from "react"
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
 const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
+
+const coluna = localFont({
+  src: '../font/Coluna.otf',
+  variable: '--font-coluna',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Emoji Smuggler',
@@ -36,7 +43,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={coluna.variable}>
       <body className={`font-mono antialiased dark`}>
         {children}
         <Analytics />
