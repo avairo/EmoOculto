@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Emoji Steganography Tool
 
-## Getting Started
+A web-based tool that hides secret messages inside emoji text using zero-width Unicode characters. The hidden message remains invisible while preserving the original appearance of the emoji sequence.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Features
+
+- Hide secret messages inside emoji strings
+- Extract hidden messages from encoded emoji text
+- Uses zero-width Unicode characters for data embedding
+- Client-side processing
+- Simple encode/decode workflow
+- Demonstrates Unicode steganography techniques
+
+---
+
+## How It Works
+
+### Encoding Process
+
+1. Enter a visible emoji sequence.
+2. Enter a secret message.
+3. The message is converted into binary.
+4. Binary data is mapped to zero-width Unicode characters.
+5. The invisible payload is appended to the emoji sequence.
+
+### Example
+
+**Visible Cover**
+
+```text
+💀💀💀
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**Secret Message**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+password123
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Result**
 
-## Learn More
+```text
+💀💀💀[hidden zero-width payload]
+```
 
-To learn more about Next.js, take a look at the following resources:
+The encoded text looks identical to the original emoji string while containing hidden data.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Decoding Process
 
-## Deploy on Vercel
+1. Paste an encoded emoji sequence.
+2. The application extracts zero-width Unicode characters.
+3. The hidden binary data is reconstructed.
+4. The original message is displayed.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Technical Details
+
+The application uses invisible Unicode characters, including:
+
+| Character | Unicode |
+|------------|------------|
+| Zero Width Space | U+200B |
+| Zero Width Non-Joiner | U+200C |
+| Zero Width Joiner | U+200D |
+| Word Joiner | U+2060 |
+
+These characters are not visible when rendered, making them useful for demonstrating Unicode-based steganography.
+
+---
+
+## Use Cases
+
+- Cybersecurity education
+- Unicode security research
+- Digital forensics demonstrations
+- Steganography learning
+- Hidden metadata experiments
+
+---
+
+## Security Considerations
+
+Zero-width Unicode characters may survive copying, pasting, and transmission across some platforms. This project demonstrates how hidden information can be embedded within otherwise normal-looking text and how such information can be detected and extracted.
+
+---
+
+## Disclaimer
+
+This project is intended for educational, research, and demonstration purposes only. It is designed to help users understand Unicode steganography techniques and methods for detecting hidden text data.
+
+---
+
+## License
+
+This project is licensed under the MIT License.
