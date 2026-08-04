@@ -291,10 +291,22 @@ export default function Home() {
             <div className="footer-section">
               <h3>FOLLOW US</h3>
               <div className="social-links">
-                <a href="#">TWITTER</a>
-                <a href="#">GITHUB</a>
-                <a href="#">DISCORD</a>
-              </div>
+  <a
+    href="https://x.com/4vairo"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    X
+  </a>
+
+  <a
+    href="https://github.com/avairo"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    GITHUB
+  </a>
+</div>
             </div>
           </div>
           <div className="footer-bottom">© 2024 EMOOCULTO | Educational Steganography Tool | v2.0</div>
